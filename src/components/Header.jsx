@@ -8,26 +8,12 @@ function Header() {
       <section className="header">
         <div className="logo">Shopify</div>
         <div className="header-link">
-          {/* <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li className="dropdown">
-                <a href="#" className="dropbtn">Products</a>
-                <div className="dropdown-content">
-                    <a href="#">Engineering</a>
-                    <a href="#">Telecom</a>
-                    <a href="#">Energy</a>
-                    <a href="#">Finance</a>
-                    <a href="#">Consultancy</a>
-                </div>
-            </li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul> */}
+          
           <ul>
+            <li className="dropdown"><Link className="dropbtn">Shop</Link></li>
             <li className="dropdown">
               <Link className="dropbtn">Men</Link>
-              
+
               <div className="dropdown-content">
                 <Link>shirts</Link>
                 <Link>shoes</Link>

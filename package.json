@@ -1,5 +1,6 @@
 {
   "name": "ecommerce-app",
+  "homepage":"http://sreeraj-1122.github.io/ecommerce-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,0 +1,22 @@
+.shop{
+    margin: 0 20px;
+}
+
+.shop-head{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 15px;
+    border-radius: 10px;
+
+}
+.shop-head-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    
+
+}
