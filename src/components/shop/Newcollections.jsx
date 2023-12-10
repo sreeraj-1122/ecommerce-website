@@ -11,10 +11,9 @@ function Newcollections() {
         data.category === "smartphones" ||
         data.category === "fragrances" ||
         data.category === "home-decoration"||
-        data.category === "sunglasses"||
-        data.category === "womens-jewellery"
+        data.category === "automotive"||
+        data.category === "motorcycle"
     );
-    console.log(newCollections);
   return (
     <>
       <section className="category-section ">
@@ -26,6 +25,7 @@ function Newcollections() {
               <Card
                 style={{ width: "18rem" }}
                 className="card shadow p-1 mb-5 bg-body rounded"
+                key={item.id}
               >
                 <div className="img-section">
                 <Card.Img

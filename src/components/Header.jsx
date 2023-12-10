@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
 import searchIcon from "../assets/search.png";
+import { Newcontext } from "../App";
 function Header() {
+  const { product, setProduct } = useContext(Newcontext);
+  const [value,setValue]=useState('mens-shirts')
+
   return (
     <>
       <section className="header">
@@ -10,15 +14,16 @@ function Header() {
         <div className="header-link">
           
           <ul>
-            <li className="dropdown"><Link className="dropbtn">Shop</Link></li>
+            <li className="dropdown"><Link to='/' className="dropbtn">Shop</Link></li>
+           
             <li className="dropdown">
               <Link className="dropbtn">Men</Link>
 
               <div className="dropdown-content">
-                <Link>shirts</Link>
-                <Link>shoes</Link>
-                <Link>watches </Link>
-                <Link>sunglasses</Link>
+                <Link to={`/product/${value}`} onClick={()=>setValue('mens-shirts')} >shirts</Link>
+                <Link to={`/product/${value}`} onClick={()=>setValue('mens-shoes')}>shoes</Link>
+                <Link to={`/product/${value}`} onClick={()=>setValue('mens-watches')}>watches </Link>
+                <Link to={`/product/${value}`} onClick={()=>setValue('sunglasses')}>sunglasses</Link>
               </div>
             </li>
 
@@ -26,19 +31,19 @@ function Header() {
             <Link className="dropbtn">women</Link>
 
                     <div className="dropdown-content">
-                                <Link>tops</Link>
-                                <Link>dresses</Link>
-                                <Link>bags</Link>
-                                <Link>watches </Link>
-                                <Link>jewellery</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('tops')}>tops</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('womens-dresses')}>dresses</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('womens-bags')}>bags</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('"womens-watches')}>watches </Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('womens-jewellery')}>jewellery</Link>
                         </div>
                     </li>
                     <li className="dropdown">
               <Link className="dropbtn">Electronics</Link>
 
                     <div className="dropdown-content">
-                                <Link>smartphones</Link>
-                                <Link>laptops</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('smartphones')}>smartphones</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('laptops')}>laptops</Link>
                                 
                         </div>
                     </li>
@@ -46,10 +51,10 @@ function Header() {
               <Link className="dropbtn">Home & Living</Link>
 
                     <div className="dropdown-content">
-                                <Link>furniture</Link>
-                                <Link>home-decorations</Link>
-                                <Link>groceries</Link>
-                                <Link>lighting</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('furniture')}>furniture</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('home-decoration')}>home-decorations</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('groceries')}>groceries</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('lighting')}>lighting</Link>
                                 
                         </div>
                     </li>
@@ -57,8 +62,8 @@ function Header() {
               <Link className="dropbtn">Beauty</Link>
 
                     <div className="dropdown-content">
-                                <Link>fragrances</Link>
-                                <Link>skincare</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('fragrances')}>fragrances</Link>
+                                <Link to={`/product/${value}`} onClick={()=>setValue('skincare')}>skincare</Link>
                                 
                         </div>
                     </li>

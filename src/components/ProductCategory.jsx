@@ -1,25 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from 'react'
+import { Newcontext } from '../App';
+import { useParams } from 'react-router-dom';
 import { Card } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
-import "../../styles/Categorystyle.css";
-import { Newcontext } from "../../App";
-function Mens() {
+import "../styles/Categorystyle.css";
+import Ads2 from './shop/Ads2';
+import Ads from './shop/Ads';
+function ProductCategory() {
   const { product, setProduct } = useContext(Newcontext);
-  const mensCategory = product.filter(
-    (data) =>
-      data.category === "mens-shirts" ||
-      data.category === "mens-shoes" ||
-      data.category === "mens-watches"
-  );
-  // console.log(mensCategory);
-
+    const {category}=useParams();
+    
+   
+    const currentData=product.filter((item)=>item.category===category)
+    console.log(currentData);
   return (
     <>
-      <section className="category-section ">
-        <h1 className="main-head">Popular in Mens</h1>
+        <section className="category-section ">
+        <h1 className="main-head">{category}</h1>
         <div className="underline"></div>
-        <div className="category-body">
-          {mensCategory.map((item,i) => (
+        <div className="category-body"> 
+          {currentData.map((item,i) => (
             <>
               <Card
                 style={{ width: "18rem" }}
@@ -56,9 +56,10 @@ function Mens() {
             </>
           ))}
         </div>
+
       </section>
     </>
-  );
+  )
 }
 
-export default Mens;
+export default ProductCategory
