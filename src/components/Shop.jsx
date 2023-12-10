@@ -5,6 +5,7 @@ import Banner from './shop/Banner'
 import Mens from './shop/Mens'
 import Newcollections from './shop/Newcollections'
 import Ads from './shop/Ads'
+import Ads2 from './shop/Ads2'
 function Shop() {
   return (
     <div className='shop'>
@@ -13,6 +14,7 @@ function Shop() {
     <Mens/>
     <Ads/>
     <Newcollections/>
+    <Ads2/>
         
     </div>
   )

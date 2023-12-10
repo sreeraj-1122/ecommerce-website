@@ -9,3 +9,13 @@
     cursor: pointer;
     
 }
+.coupen{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.coupen img{
+    width: 310px;
+
+}
