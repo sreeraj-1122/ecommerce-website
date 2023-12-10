@@ -1,0 +1,11 @@
+.products-ads{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    row-gap: 20px;
+}
+.products-ads img{
+    width: 400px;
+    cursor: pointer;
+    
+}

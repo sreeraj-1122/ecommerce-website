@@ -1,11 +1,22 @@
 import Header from './components/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Mens from './components/Mens';
-import Shop from './components/shop/Shop';
+import Mens from './components/shop/Mens';
+import Shop from './components/Shop';
+import { createContext, useEffect, useState } from 'react';
+import axios from 'axios'
+export const Newcontext = createContext();
 function App() {
+  const [product,setProduct]=useState([])
+  useEffect(()=>{
+      axios.get('https://dummyjson.com/products?limit=0').then((response)=>{
+        console.log(response.data.products);
+        setProduct(response.data.products)
+      })  
+  },[])
   return (
     <div >
-      <BrowserRouter>
+      <Newcontext.Provider value={{product,setProduct}}>
+      <BrowserRouter  >
       <Header/>
 
         <Routes>
@@ -13,6 +24,8 @@ function App() {
           {/* <Route path='/men' element={<Shop/>}/> */}
         </Routes>
       </BrowserRouter>
+      </Newcontext.Provider>
+     
     </div>
   );
 }
