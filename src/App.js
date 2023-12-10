@@ -21,7 +21,7 @@ function App() {
       <Header/>
 
         <Routes>
-          <Route path='/' element={<Shop/>}/>
+          <Route path='/ecommerce-website' element={<Shop/>}/>
           <Route path='/product/:category' element={<ProductCategory/>}/>
           {/* <Route path='/men' element={<Shop/>}/> */}
         </Routes>

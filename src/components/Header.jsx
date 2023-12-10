@@ -14,7 +14,7 @@ function Header() {
         <div className="header-link">
           
           <ul>
-            <li className="dropdown"><Link to='/' className="dropbtn">Shop</Link></li>
+            <li className="dropdown"><Link to='/ecommerce-website' className="dropbtn">Shop</Link></li>
            
             <li className="dropdown">
               <Link className="dropbtn">Men</Link>

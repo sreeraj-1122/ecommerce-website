@@ -47,9 +47,9 @@ function ProductCategory() {
                    {item.description}
                   </Card.Text> */}
                   <Card.Text className="price-section ">
-                    <span className="price">Rs: {item.price} </span>{" "}
-                    <span className="original-price">Rs: {item.price+246}</span>
-                    <span className="offer">({Math.floor(100-item.discountPercentage)} % OFF)</span>
+                    <span className="price">Rs: {item.price+500} </span>{" "}
+                    <span className="original-price">Rs: {item.price+946}</span>
+                    <span className="offer">({Math.floor(70-item.discountPercentage)} % OFF)</span>
                   </Card.Text>
                 </Card.Body>
               </Card>
