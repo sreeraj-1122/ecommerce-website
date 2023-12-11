@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "../../styles/Categorystyle.css";
 import { Newcontext } from "../../App";
+import { Link } from "react-router-dom";
 function Mens() {
   const { product, setProduct } = useContext(Newcontext);
   const mensCategory = product.filter(
@@ -21,7 +22,8 @@ function Mens() {
         <div className="category-body">
           {mensCategory.map((item,i) => (
             <>
-              <Card
+             <Link to={`/details/${item.id}`}>
+             <Card
                 style={{ width: "18rem" }}
                 className="card shadow p-1 mb-5 bg-body rounded"
                 key={i}
@@ -53,6 +55,7 @@ function Mens() {
                   </Card.Text>
                 </Card.Body>
               </Card>
+             </Link>
             </>
           ))}
         </div>

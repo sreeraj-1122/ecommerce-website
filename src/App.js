@@ -5,6 +5,7 @@ import Shop from './components/Shop';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios'
 import ProductCategory from './components/ProductCategory';
+import Details from './components/Details';
 export const Newcontext = createContext();
 function App() {
   const [product,setProduct]=useState([])
@@ -23,7 +24,8 @@ function App() {
         <Routes>
           <Route path='/ecommerce-website' element={<Shop/>}/>
           <Route path='/product/:category' element={<ProductCategory/>}/>
-          {/* <Route path='/men' element={<Shop/>}/> */}
+          <Route path='/details/:id' element={<Details/>}/>
+         
         </Routes>
       </BrowserRouter>
       </Newcontext.Provider>
