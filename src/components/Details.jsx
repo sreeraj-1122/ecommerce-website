@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Newcontext } from "../App";
 import { useParams } from "react-router-dom";
 import "../styles/Details.css";
@@ -7,21 +7,25 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
 function Details() {
   const { product, setProduct } = useContext(Newcontext);
-  const { id } = useParams();
+  const { id } = useParams('');
   const userid = parseInt(id);
   const singleProduct = product.find((item) => item.id === userid);
-  console.log(singleProduct);
+  // console.log(singleProduct.thumbnail);
+  let [images,setImages]=useState(singleProduct.thumbnail)
+  let [count,setCount]=useState(1)
+  
+
   return (
     <div className="product-display">
       <div className="product-display-left">
         <div className="product-display-img-list">
-          <img src={singleProduct.images[3]} alt="" />
-          <img src={singleProduct.images[2]} alt="" />
-          <img src={singleProduct.images[1]} alt="" />
-          <img src={singleProduct.images[0]} alt="" />
+          <img src={singleProduct.images[3]} onClick={()=>setImages(singleProduct.images[3])} alt="" />
+          <img src={singleProduct.images[2]}  onClick={()=>setImages(singleProduct.images[2])} alt="" />
+          <img src={singleProduct.images[1]}  onClick={()=>setImages(singleProduct.images[1])} alt="" />
+          <img src={singleProduct.images[0]}  onClick={()=>setImages(singleProduct.images[0])} alt="" />
         </div>
         <div className="product-display-main-img">
-          <img src={singleProduct.thumbnail} alt="" />
+          <img src={images} alt="" />
         </div>
       </div>
       <div className="product-display-right">
@@ -44,13 +48,12 @@ function Details() {
             {singleProduct.description}
         </div>
         <div className="product-display-right-size">
-            <h1>Select Size</h1>
+            <h1>Select Quantity</h1>
             <div className="product-display-right-sizes">
-                <div>S</div>
-                <div>M</div>
-                <div>L</div>
-                <div>XL</div>
-                <div>XXL</div>
+                <div className="qty-icon" onClick={()=>setCount(count--)}>-</div>
+                <div>{count>0?count:1}</div>
+                <div  className="qty-icon" onClick={()=>setCount(count++)}>+</div>
+               
             </div>
         </div>
         <button>ADD TO CART</button>

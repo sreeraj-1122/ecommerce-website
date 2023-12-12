@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "../../styles/Categorystyle.css";
 import { Newcontext } from "../../App";
+import { Link } from "react-router-dom";
 
 function Newcollections() {
     const { product, setProduct } = useContext(Newcontext);
@@ -22,7 +23,8 @@ function Newcollections() {
         <div className="category-body">
           {newCollections.map((item) => (
             <>
-              <Card
+            <Link to={`/details/${item.id}`} className="nav-link">
+            <Card
                 style={{ width: "18rem" }}
                 className="card shadow p-1 mb-5 bg-body rounded"
                 key={item.id}
@@ -54,6 +56,8 @@ function Newcollections() {
                   </Card.Text>
                 </Card.Body>
               </Card>
+            </Link>
+              
             </>
           ))}
 

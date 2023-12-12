@@ -25,6 +25,9 @@
     margin-bottom: 30px;
     margin-top: 30px;
 }
+.category-body .nav-link{
+    text-decoration: none;
+}
 .card{
     height: 470px;
     width: 18rem;

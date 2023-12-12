@@ -22,7 +22,7 @@ function Mens() {
         <div className="category-body">
           {mensCategory.map((item,i) => (
             <>
-             <Link to={`/details/${item.id}`}>
+             <Link to={`/details/${item.id}`} key={item.id} className="nav-link">
              <Card
                 style={{ width: "18rem" }}
                 className="card shadow p-1 mb-5 bg-body rounded"
@@ -36,7 +36,7 @@ function Mens() {
                   style={{ height: "20rem" }}
                 />
                 </div>
-                <Card.Body >
+                <Card.Body key={item.id} >
                   <Card.Text className="rating-section">
                     
                     <span className="rate">{item.rating}</span>{" "}

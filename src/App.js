@@ -6,6 +6,7 @@ import { createContext, useEffect, useState } from 'react';
 import axios from 'axios'
 import ProductCategory from './components/ProductCategory';
 import Details from './components/Details';
+import Footer from './components/Footer';
 export const Newcontext = createContext();
 function App() {
   const [product,setProduct]=useState([])
@@ -27,6 +28,7 @@ function App() {
           <Route path='/details/:id' element={<Details/>}/>
          
         </Routes>
+        <Footer/>
       </BrowserRouter>
       </Newcontext.Provider>
      

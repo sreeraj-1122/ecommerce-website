@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Newcontext } from '../App';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Card } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "../styles/Categorystyle.css";
@@ -21,7 +21,8 @@ function ProductCategory() {
         <div className="category-body"> 
           {currentData.map((item,i) => (
             <>
-              <Card
+            <Link to={`/details/${item.id}`} className='nav-link'>
+            <Card
                 style={{ width: "18rem" }}
                 className="card shadow p-1 mb-5 bg-body rounded"
                 key={i}
@@ -53,6 +54,8 @@ function ProductCategory() {
                   </Card.Text>
                 </Card.Body>
               </Card>
+            </Link>
+              
             </>
           ))}
         </div>
