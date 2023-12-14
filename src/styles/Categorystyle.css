@@ -75,3 +75,15 @@
 .price-section{
     margin-top: 10px;
 }
+@media(max-width:425px){
+    .category-body{
+        display: grid;
+        grid-template-columns:  1fr;
+        place-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .adds{
+        display: none;
+    }
+}

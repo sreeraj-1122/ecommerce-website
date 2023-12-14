@@ -19,3 +19,23 @@
     width: 310px;
 
 }
+@media(max-width:425px){
+    .products-ads{
+        display: grid;
+        grid-template-columns: 1fr ;
+        place-items: center;
+        row-gap: 10px;
+    }
+    .products-ads img{
+        width: 300px;
+        cursor: pointer;
+        
+    }
+    .coupen img{
+        width: 110px;
+    
+    }
+    .coupen{
+        display: none;
+    }
+}

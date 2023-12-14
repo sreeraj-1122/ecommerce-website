@@ -20,3 +20,10 @@
     
 
 }
+@media(max-width:425px){
+    .shop-head{
+        display: none;
+       
+    
+    }
+}

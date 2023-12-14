@@ -63,17 +63,17 @@ function Newcollections() {
             </>
           ))}
 
-            <div className="p-2 " style={{marginBottom:'70px'}}>
+            <div className="p-2 adds " style={{marginBottom:'70px'}}>
             <img style={{width: '300px',marginBottom:'20px'}} src="https://rukminim1.flixcart.com/fk-p-flap/520/280/image/0bfa366c8ff03748.jpg?q=20" alt="" />     
              <img style={{width: '300px'}} src="https://rukminim1.flixcart.com/fk-p-flap/520/280/image/843f21fee0983555.jpg?q=20" alt="" /> 
                  
             </div>
-            <div className="p-2" style={{marginBottom:'70px'}}>
+            <div className="p-2 adds" style={{marginBottom:'70px'}}>
             <img style={{width: '300px',marginBottom:'20px'}} src="https://rukminim1.flixcart.com/fk-p-flap/520/280/image/2bd99f6562bf885f.jpg?q=20" alt="" />     
              <img style={{width: '300px'}} src="https://rukminim1.flixcart.com/fk-p-flap/520/280/image/00bd6cf4e114899d.jpg?q=20" alt="" /> 
                  
             </div>
-            <div className="p-2" style={{marginBottom:'70px'}}>
+            <div className="p-2 adds" style={{marginBottom:'70px'}}>
             <img style={{width: '300px',marginBottom:'20px'}} src="https://rukminim1.flixcart.com/fk-p-flap/520/280/image/788e38837eef4f21.jpg?q=20" alt="" />     
              <img style={{width: '300px'}} src="https://rukminim1.flixcart.com/fk-p-flap/520/280/image/1827e18a0c532367.jpg?q=20" alt="" /> 
                  
