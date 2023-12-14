@@ -13,7 +13,7 @@ function Footer() {
                     <div>About</div>
                 </div>
                 <hr className='line' />
-                <div className="date">© 2021 Shopify, Inc</div>
+                <div className="date">© 2024 Shopify, Inc</div>
                 <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/payment-method-c454fb.svg" alt="" />  
             </div>
             

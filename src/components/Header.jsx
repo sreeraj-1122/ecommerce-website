@@ -3,7 +3,7 @@ import "../styles/Header.css";
 import { Link } from "react-router-dom";
 import searchIcon from "../assets/search.png";
 import { Newcontext } from "../App";
-function Header() {
+function Header(props) {
   const { product, setProduct } = useContext(Newcontext);
   const [value,setValue]=useState('mens-shirts')
 
@@ -73,13 +73,16 @@ function Header() {
           <img src={searchIcon} className="search" alt="" />
           <input type="text" placeholder="Search items" />
         </div>
-        <div className="cart-header">
+        <Link to='/cart'>
+        <div className="cart-header" >
           <img
             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
             alt=""
+            
           />
-          <p>Cart</p>
+          <div className="nav-cart-count">{props.count}</div>
         </div>
+        </Link>
       </section>
     </>
   );

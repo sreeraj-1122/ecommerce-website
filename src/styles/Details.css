@@ -40,6 +40,7 @@
 }
 .product-display-right{
     margin: 0 50px;
+    padding-top: 30px;
 }
 .product-display-right p{
     color: #3d3d3d;
@@ -95,7 +96,13 @@
     font-weight: 400;
     width: 400px;
 }
-.product-display-right-size h1{
+.product-category{
+    font-size: 17px;
+    font-weight: 500;
+    color: #0f0f0f;
+    margin-top:20px ;
+}
+/* .product-display-right-size h1{
     margin-top: 20px;
     color: #656565;
     font-size: 20px;
@@ -122,7 +129,7 @@
         cursor: pointer;
         font-size: 20px;
         font-weight: 700;
-}
+} */
 .product-display-right button{
     padding: 10px 40px;
     width: 200px;

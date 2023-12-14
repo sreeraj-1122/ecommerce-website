@@ -39,10 +39,11 @@ function Mens() {
                 <Card.Body key={item.id} >
                   <Card.Text className="rating-section">
                     
-                    <span className="rate">{item.rating}</span>{" "}
+                    <span className="rate">{Math.round(item.rating*10)/10} </span>
                     <span>
                       <FaStar className=" star text-primary" />
                     </span>
+                    <span className="rate mx-2"> | ({item.stock+78})</span>
                   </Card.Text>
                   <Card.Title className="card-title">{item.title}</Card.Title>
                   {/* <Card.Text>
